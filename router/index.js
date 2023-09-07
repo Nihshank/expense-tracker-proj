@@ -1,12 +1,19 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import Splash from '../components/Splash.vue'
 
 const routes = [
+    {
+        path: '/',
+        name: 'splash',
+        component: Splash
+    },
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
+  
   {
     path: '/about',
     name: 'about',

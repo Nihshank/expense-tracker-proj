@@ -2,51 +2,27 @@
 
 <template>
   <div class ="container">
-    <Header></Header>
-    <router-view></router-view>
-    <Footer></Footer>
+      <Header v-if = "!showSplash" ></Header>
+      <router-view class = "fade"></router-view>
+      <Footer v-if = "!showSplash" ></Footer>  
   </div>
 </template>
 
 <script>
 
-  import Header from './components/Header.vue';
-  import Footer from './components/Footer.vue';
+    import Header from './components/Header.vue';
+    import Footer from './components/Footer.vue';
 
   export default{
     name: 'App',
     components: {
-      Footer,
-      Header
+      Header,
+      Footer
     },
-    data(){
-      return{
-        transactions: []
+    computed: {
+      showSplash() {
+        return this.$route.name === 'splash';
       }
-    },
-    created(){
-      this.transactions = [
-         {
-          description: 'Halls',
-          amount: 3.50,
-          is_expense: true
-         },
-         {
-          description: 'Call of duty',
-          amount: 79.99,
-          is_expense: true
-         },
-         {
-          description: 'Sold ps4',
-          amount: 200,
-          is_expense: false
-         },
-         {
-          description: 'Macbook pro 2014',
-          amount: 1098,
-          is_expense: true
-         }
-      ]
     }
   }
 </script>
@@ -94,5 +70,4 @@
     .router-effect:hover{
         transform: translateY(20%);
     }
-
 </style>

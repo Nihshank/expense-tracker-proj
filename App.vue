@@ -64,7 +64,7 @@
     }
 
     .router-effect{
-      transition: 0.5s ease-in;
+      transition: 0.5s ease-in-out;
     }
 
     .router-effect:hover{

@@ -1,11 +1,11 @@
 <template>
     <div class="landing">
-      <h1 class= "slide" >Take Control of Your Finances</h1>
+      <h1 class= "slide" >Take Control of Your Finances.</h1>
       <div class="drop">
-        <h1 class="word">One</h1>
-        <h1 class="word">Expense</h1>
-        <h1 class="word">At</h1>
-        <h1 class="word">A</h1>
+        <h1 class="word">One.</h1>
+        <h1 class="word">Expense.</h1>
+        <h1 class="word">At.</h1>
+        <h1 class="word">A.</h1>
         <h1 class="word">Time!</h1>
       </div>
     </div>
@@ -82,7 +82,7 @@
   
   @keyframes word-drop {
     0% {
-      transform: translateY(-100%);
+      transform: translateY(-150%);
       opacity: 0;
     }
     100% {
@@ -90,5 +90,12 @@
       opacity: 1;
     }
   }
+
+  @media (max-width: 780px){
+    .drop{
+      flex-direction: column;
+    }
+  }
+
   </style>
   
